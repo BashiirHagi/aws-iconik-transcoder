@@ -4,12 +4,11 @@ This project provisions a secure and automated AWS infrastructure for integratin
 
 ## Features
 
-- Private VPC with public subnet and internet access  
-- Secure S3 bucket for master content ingestion  
-- EC2 instance running iconik edge transcoder  
-- IAM roles with scoped S3 access  
-- AMI-compatible deployment  
-- Modular and reusable Terraform setup
+- AWS VPC with public subnet and internet gateway attached
+- S3 bucket provisioned for master content ingestion for media assets
+- Linux Ubuntu EC2 instance with iconik edge transcoder installed
+- AMI created for Iconik edge transcoder for reusability 
+- Terraform Modules configured for AWS services
 
 ## Architecture
 
