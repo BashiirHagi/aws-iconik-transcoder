@@ -30,24 +30,24 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3_sencryption" {
   }
 }
 
-resource "aws_s3_bucket_policy" "allow_iconik_access" { //iconik-S3-bucket-access policy 
+resource "aws_s3_bucket_policy" "allow_iconik_access" {  //iconik-S3-bucket-access policy 
   bucket = aws_s3_bucket.s3_iconik_master.id
 
   policy = jsonencode({
-    Version = "2012-10-17"
+    Version = "2012-10-17",
     Statement = [
       {
-        Effect = "Allow"
+        Effect = "Allow",
         Principal = {
-          AWS = "arn:aws:iam::306744105408:user/iconik-access"  # IAM service account arn 
-        }
+          AWS = "arn:aws:iam::306744105408:user/iconik-access"
+        },
         Action = [
           "s3:GetObject",
           "s3:ListBucket"
-        ]
+        ],
         Resource = [
-          aws_s3_bucket.s3_iconik_master.arn,
-          "${aws_s3_bucket.s3_iconik_master.arn}/*"
+          "arn:aws:s3:::iconik-master-ingest-bashiir",
+          "arn:aws:s3:::iconik-master-ingest-bashiir/*"
         ]
       }
     ]
