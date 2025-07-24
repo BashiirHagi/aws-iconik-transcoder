@@ -1,3 +1,3 @@
 # aws-iconik-transcoder
 
-[aws-iconik-transcoder.png]
+![Architecture Diagram](./aws-iconik-transcoder.png)
