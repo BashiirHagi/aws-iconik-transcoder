@@ -14,7 +14,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 
 ![Architecture Diagram](./aws-iconik-transcoder.png)
 
-## Module Structure
+## Project Structure
 
 ```bash
 aws-iconik-transcoder/
