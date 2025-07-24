@@ -17,10 +17,31 @@ This project provisions a secure and automated AWS infrastructure for integratin
 
 ## Module Structure
 
-- `modules/vpc`: Sets up VPC, subnet, route table, and internet gateway  
-- `modules/s3_bucket`: Provisions versioned S3 bucket with encryption and bucket policy  
-- `modules/ec2`: Launches EC2 with IAM profile, key pair, and security group  
-- `modules/iam`: (Optional) IAM policy/role attachment  
+```bash
+aws-iconik-transcoder/
+├── .terraform/                       
+├── modules/
+│   ├── ec2/
+│   │   ├── ec2.tf                   
+│   │   ├── outputs.tf                
+│   │   └── variables.tf              
+│   ├── S3/
+│   │   ├── s3.tf                     
+│   │   ├── outputs.tf                
+│   │   └── variables.tf             
+│   └── vpc/
+│       ├── vpc.tf                    
+│       ├── outputs.tf                
+│       └── variables.tf             
+├── .gitignore
+├── aws-iconik-transcoder.png        
+├── main.tf                          
+├── provider.tf                      
+├── README.md                        
+├── terraform.tfstate                
+├── terraform.tfstate.backup         
+├── terraform.tfvars                 
+└── variables.tf                     
 
 ## Requirements
 
