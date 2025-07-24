@@ -11,6 +11,10 @@ This project provisions a secure and automated AWS infrastructure for integratin
 - AMI-compatible deployment  
 - Modular and reusable Terraform setup
 
+## Architecture
+
+![Architecture Diagram](./aws-iconik-transcoder.png)
+
 ## Module Structure
 
 - `modules/vpc`: Sets up VPC, subnet, route table, and internet gateway  
@@ -31,7 +35,3 @@ This project provisions a secure and automated AWS infrastructure for integratin
    ```bash
    git clone https://github.com/your-org/aws-iconik-transcoder.git
    cd aws-iconik-transcoder
-
-## Architecture
-
-![Architecture Diagram](./aws-iconik-transcoder.png)
