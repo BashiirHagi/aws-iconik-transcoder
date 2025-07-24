@@ -8,7 +8,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 - S3 bucket provisioned for master content ingestion for media assets
 - Linux Ubuntu EC2 instance with iconik edge transcoder installed
 - AMI created for Iconik edge transcoder for reusability 
-- Terraform Modules configured for AWS services
+- Terraform Modules configured for AWS services - EC2, S3 & VPC
 
 ## Architecture
 
