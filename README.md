@@ -42,13 +42,14 @@ aws-iconik-transcoder/
 ├── terraform.tfstate.backup         
 ├── terraform.tfvars                 
 └── variables.tf                     
+```
 
 ## Requirements
 
 - Terraform >= 1.4.0  
-- AWS CLI with proper credentials  
-- iconik portal access (for configuration)  
-- iconik edge transcoder installer  
+- AWS CLI configured with access keys 
+- Iconik web portal access to - https://preview.iconik.cloud/
+- Iconik edge transcoder installer 
 
 ## How to Use
 
