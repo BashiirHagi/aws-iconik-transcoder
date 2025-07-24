@@ -11,18 +11,18 @@ module "vpc" {
 }
 
 module "ec2_instance" {
-  source               = "./modules/ec2"
-  vpc_id               = module.vpc.vpc_id
-  ami_id               = var.ami_id
-  instance_type        = var.instance_type
-  subnet_id            = module.vpc.public_subnet_id                                       
-  key_name             = var.key_name
+  source        = "./modules/ec2"
+  vpc_id        = module.vpc.vpc_id
+  ami_id        = var.ami_id
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  key_name      = var.key_name
 }
 
 module "s3_bukcet" {
-  source           = "./modules/S3"
-  aws_s3_bucket    = var.aws_s3_bucket
-  status           = var.status
-  sse_algorithm    = var.sse_algorithm
-  tags             = var.tags
+  source        = "./modules/S3"
+  aws_s3_bucket = var.aws_s3_bucket
+  status        = var.status
+  sse_algorithm = var.sse_algorithm
+  tags          = var.tags
 }

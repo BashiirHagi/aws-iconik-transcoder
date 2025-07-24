@@ -30,25 +30,41 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3_sencryption" {
   }
 }
 
-resource "aws_s3_bucket_policy" "allow_iconik_access" {  //iconik-S3-bucket-access policy 
+resource "aws_s3_bucket_policy" "allow_iconik_access" { //iconik-S3-bucket-access policy 
   bucket = aws_s3_bucket.s3_iconik_master.id
 
   policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
+    "Version" : "2012-10-17",
+    "Id" : "IconikAccessPolicy",
+    "Statement" : [
       {
-        Effect = "Allow",
-        Principal = {
-          AWS = "arn:aws:iam::306744105408:user/iconik-access"
+        "Sid" : "AllowObjectLevelAccess",
+        "Effect" : "Allow",
+        "Principal" : {
+          "AWS" : "arn:aws:iam::306744105408:user/bashiir_hagi"
         },
-        Action = [
+        "Action" : [
           "s3:GetObject",
-          "s3:ListBucket"
+          "s3:PutObject",
+          "s3:DeleteObject",
+          "s3:RestoreObject"
         ],
-        Resource = [
-          "arn:aws:s3:::iconik-master-ingest-bashiir",
-          "arn:aws:s3:::iconik-master-ingest-bashiir/*"
-        ]
+        "Resource" : "arn:aws:s3:::iconik-master-ingest-bashiir/*"
+      },
+      {
+        "Sid" : "AllowBucketLevelAccess",
+        "Effect" : "Allow",
+        "Principal" : {
+          "AWS" : "arn:aws:iam::306744105408:user/bashiir_hagi"
+        },
+        "Action" : [
+          "s3:GetBucketLocation",
+          "s3:ListBucket",
+          "s3:GetBucketCORS",
+          "s3:PutBucketCORS",
+          "s3:GetAccelerateConfiguration"
+        ],
+        "Resource" : "arn:aws:s3:::iconik-master-ingest-bashiir"
       }
     ]
   })
