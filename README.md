@@ -1,14 +1,17 @@
-# AWS + iconik Transcoder Integration
+# AWS iconik Transcoder Integration Project
 
-This project provisions a secure and automated AWS infrastructure for integrating with the iconik Media Asset Management (MAM) system. It enables the upload of master content to an S3 bucket and automatically triggers the iconik edge transcoder to generate web proxies for seamless preview in the iconik Web UI.
+This project provisions a secure and automated AWS infrastructure for integrating the iconik Media Asset Management (MAM) system for media asset uploads. It enables the upload of master content into an S3 bucket and automatically triggers the iconik edge transcoder to generate web proxies for seamless viewing in the iconik Web portal.
 
 ## Features
 
-- AWS VPC with public subnet and internet gateway attached
-- S3 bucket provisioned for master content ingestion for media assets
-- Linux Ubuntu EC2 instance with iconik edge transcoder installed
-- AMI created for Iconik edge transcoder for reusability 
-- Terraform Modules configured for AWS services - EC2, S3 & VPC
+- AWS VPC, public subnet and internet gateway provisioned for internet access
+- S3 bucket provisioned for master content ingestion 
+- Linux Ubuntu EC2 instance provisioned and iconik edge transcoder installed
+- AMI image created for Iconik edge transcoder to improve reusability 
+- Terraform Modules configured to automate AWS deployments - EC2, S3 & VPC. 
+- AWS services isolated in separate Terraform folders in the Child modules with service.tf, variables.tf and output.tf defined. 
+- Local terraform state used to manage the state of the remote infrastructure 
+- Architecture diagram demonstrating system components created in Excalidraw, to improve understanding of data flow and service interactions. 
 
 ## Architecture
 
