@@ -13,7 +13,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 - Local terraform state used to manage the state of the remote infrastructure 
 - Architecture diagram demonstrating system components created in Excalidraw, to improve understanding of data flow and service interactions. 
 
-## Architecture
+## High-Level Architecture
 
 ![Architecture Diagram](./aws-iconik-transcoder.png)
 
