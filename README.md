@@ -60,7 +60,7 @@ aws-iconik-transcoder/
 - SSH into the EC2 instance via the terminal 
 
 Once connected to the instance, create the transcoder installation script by following the below steps: 
-- run vim transcoder-install.sh in the terminal 
+- Run vim transcoder-install.sh in the terminal 
 - Add #!bin/bash to the file header 
 - Copy the below package installation commands to the file 
 
@@ -78,13 +78,13 @@ sudo apt-get install nscd
 sudo apt-get install exiftool
 ```
 
-- save the changes by running - wq!
+- Save the changes by running - wq!
 
 ## Edit the configuration file (config.ini) by performing the following steps: 
 
 - Navigate to the /etc/iconik/iconik_edge_transcoder/config.ini path
-- run - vim config.ini
-- Add the following code block and update the relevant parameters for your environment
+- Run - vim config.ini
+- Copy the below code block the file and update the relevant parameters for your environment
 
 ```bash
 
@@ -105,8 +105,8 @@ image-magick-config = /etc/iconik/iconik_edge_transcoder/image_magick_config
 ## Transcoder proxy startup services and enablement:
 Create the transcoder services script with the following commands:  
 - vim transcoder-services.sh 
-- add #!bin/bash to the file header 
-- copy the following code block to the file 
+- Add #!bin/bash to the file header 
+- Copy the following code block to the file 
 
 ```bash
 - copy the following contents inside: 
@@ -116,17 +116,17 @@ Create the transcoder services script with the following commands:
 - sudo systemctl start iconik-edge-transcoder
 ```
 
-- save the changes by running - wq!
-- run chmod 700 transcoder-services.sh to give the script executable permissions
+- Save the changes by running - wq!
+- Run chmod 700 transcoder-services.sh to give the script executable permissions
 
 
 ## AWS AMI setup 
 - Navigate to the EC2 intances console 
--  Select the instance that you want to create an AMI image for
+- Select the instance that you want to create an AMI image for
 - Click on Actions 
 - Click on Image and Templates
 - Click on Create Image
-- AMI image is created now, and can be used to launch instances with retaining OS image and installed tools & dpependencies 
+- AMI image is created now, and can be used to launch instances, retaining OS image and installed tools & dependencies 
 
 
 
