@@ -6,7 +6,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 
 - AWS VPC, public subnet and internet gateway provisioned for internet access
 - S3 bucket provisioned for master content ingestion 
-- Linux Ubuntu EC2 instance provisioned and iconik edge transcoder installed
+- Linux Ubuntu EC2 instance provisioned in a auto-scaling group for scalability with iconik edge transcoder installed
 - AMI image created for Iconik edge transcoder to improve reusability 
 - Terraform Modules configured to automate AWS deployments - EC2, S3 & VPC. 
 - AWS services isolated in separate Terraform folders in the Child modules with service.tf, variables.tf and output.tf defined. 
