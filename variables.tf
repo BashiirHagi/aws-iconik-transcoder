@@ -36,6 +36,45 @@ variable "key_name" {
   type        = string
 }
 
+///
+variable "asg_name" {
+  type        = string
+  description = ""
+}
+
+variable "asg_max_size" {
+  type        = string
+  description = ""
+}
+
+variable "asg_min_size" {
+  type        = string
+  description = ""
+}
+
+variable "health_check_grace_period" {
+  type = number
+}
+
+variable "health_check_type" {
+  type        = string
+  description = "value"
+}
+
+variable "desired_capacity" {
+  type        = number
+  description = ""
+}
+
+variable "force_delete_status" {
+  type = bool
+}
+
+variable "vpc_zone_identifier" {
+  description = "List of subnet IDs for the Auto Scaling group"
+  type        = list(string)
+}
+
 ##S3
 
 variable "aws_s3_bucket" {

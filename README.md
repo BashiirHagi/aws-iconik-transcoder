@@ -128,5 +128,8 @@ Create the transcoder services script with the following commands:
 - Click on Create Image
 - AMI image is created now, and can be used to launch instances, retaining OS image and installed tools & dependencies 
 
-
-
+## Future Improvements 
+- High availability - Deploy the transcoder instances across multiple subnets, availability zones and regions
+- Security - Deploy the transcoder instances in private subnets ensuring its secure, across multiple availability zones connecting to NAT gateways for public internet access. 
+- Scalability - Autoscaling groups, Use ECS Fargate launch type to deploy the transcoder (serverless), 
+- Cost efficiency - Utilise VPC endpoitns to allow resources in the VPC to connect securely to the S3 buckets to access data. This is to prevent traffic leaving the private network and to reduce egress traffic charges. 
