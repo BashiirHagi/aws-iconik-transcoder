@@ -1,25 +1,11 @@
-resource "aws_instance" "iconik_transcoder" {
-  ami             = var.ami_id
-  instance_type   = var.instance_type
-  subnet_id       = var.subnet_id
-  security_groups = [aws_security_group.iconik_sg.id]
-  key_name        = var.key_name
-
-  tags = {
-    Name    = "iconik-edge-transcoder"
-    Project = "iconik-transcoder"
-  }
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
 ## launch template for asg
 resource "aws_launch_template" "launch-template-asg" {
   name_prefix   = "launch-template-iconik"
   image_id      = var.ami_id
   instance_type = "t3.micro"
+  key_name      = var.key_name
+
+  vpc_security_group_ids = [aws_security_group.iconik_sg.id]
 }
 
 resource "aws_autoscaling_group" "transcoder-asg" {
@@ -36,6 +22,7 @@ resource "aws_autoscaling_group" "transcoder-asg" {
     id      = aws_launch_template.launch-template-asg.id
     version = "$Latest"
   }
+
 }
 
 resource "aws_security_group" "iconik_sg" {

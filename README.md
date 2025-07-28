@@ -62,6 +62,7 @@ aws_region = ""
 # VPC and Subnet configuration
 vpc_cidr_block     = ""
 public_subnet_cidr = ""
+private_subnet_cidr = ""
 availability_zone  = ""
 
 # EC2 
