@@ -166,16 +166,20 @@ To create the AMI image containing the iconik edge transcoder, perform the follo
 - AMI image has been created now, and will be available in the EC2 AMIs console. You can now use this AMI to quickly launch instances with the iconik edge transcoder installed. 
 
 ## Future Improvements I would implement 
-- High availability - To ensure the high availability of the platform I would deploy the iconik Edge Transcoder across multiple subnets, availability zones and regions. This would improve the fault-tolerance and prevent a single point of failure we have now. 
+- ### High availability:
+To ensure the high availability of the platform I would deploy the iconik Edge Transcoder across multiple subnets, availability zones and regions. This would improve the fault-tolerance and prevent a single point of failure we have now. 
 
-- Security Enhancements - To increase the security of the workloads I would implement the following: 
+- ### Security Enhancements:
+To increase the security of the workloads I would implement the following: 
 
- - Enforce least privillege access in the S3 bucket policy 
- - AWS Systems Manager (SSM) for secure access as an alternative to SSH access
- - I would enable AWS Macie, VPC flow logs and AWS GuardDuty which would increase the visibility and secutity of the platform
-
-
-- Scalability - To further increase the scalability of the compute resources I would use Elastic Container services (ECS) with fargat launch type to run the iconik Edge Transcoder. This will allow me to utilise the benefits of serverless and containerisation without managing the underlying infrastructure. 
+ Enforce least privillege access in the S3 bucket policy 
+ AWS Systems Manager (SSM) for secure access as an alternative to SSH access
+ I would enable AWS Macie, VPC flow logs and AWS GuardDuty which would increase the visibility and secutity of the platform
 
 
-- Cost Efficiency - To reduce the costs incurred in the platform, I would integrate VPC gateway endpoints to allow the compute resources in the VPC to securely connect to the S3 bucket without traversing the public internet. This would create a secure private connection between the services and prevent network traffic from leaving the VPC, greatly reducing egress traffic charges. 
+- ### Scalability:
+To further increase the scalability of the compute resources I would use Elastic Container services (ECS) with fargat launch type to run the iconik Edge Transcoder. This will allow me to utilise the benefits of serverless and containerisation without managing the underlying infrastructure. 
+
+
+- ### Cost Efficiency:
+To reduce the costs incurred in the platform, I would integrate VPC gateway endpoints to allow the compute resources in the VPC to securely connect to the S3 bucket without traversing the public internet. This would create a secure private connection between the services and prevent network traffic from leaving the VPC, greatly reducing egress traffic charges. 
