@@ -8,10 +8,10 @@ This project provisions a secure and automated AWS infrastructure for integratin
 - S3 bucket provisioned for master content ingestion and bucket permissions configured
 - Linux Ubuntu EC2 instance provisioned in a auto-scaling group for scalability purposes
 - AMI image created for Iconik edge transcoder to improve reusability 
-- Terraform Modules configured to automate AWS deployments - EC2, S3 & VPC. 
-- Terraform configuration for AWS service isolated in separate Child modules folders - containing service.tf, variables.tf and output.tf. 
+- Terraform Modules configured to automate AWS deployments - EC2, S3 & VPC
+- Terraform configuration for AWS service isolated in separate Child modules folders - containing service.tf, variables.tf and output.tf
 - Local terraform state used to manage the state of the remote infrastructure. //
-- Architecture diagram demonstrating system components created in Excalidraw, to improve understanding of data flow and service interactions. 
+- Architecture diagram demonstrating system components created in Excalidraw, to improve understanding of data flow and service interactions
 
 ## High-Level Architecture
 
@@ -172,9 +172,9 @@ To ensure the high availability of the platform I would deploy the iconik Edge T
 - ### Security Enhancements:
 To increase the security of the workloads I would implement the following: 
 
- Enforce least privillege access in the S3 bucket policy 
- AWS Systems Manager (SSM) for secure access as an alternative to SSH access
- I would enable AWS Macie, VPC flow logs and AWS GuardDuty which would increase the visibility and secutity of the platform
+- Enforce least privillege access in the S3 bucket policy 
+- AWS Systems Manager (SSM) for secure access as an alternative to SSH access
+- I would enable AWS Macie, VPC flow logs and AWS GuardDuty which would increase the visibility and secutity of the platform
 
 
 - ### Scalability:
