@@ -37,13 +37,14 @@ aws-iconik-transcoder/
 │       └── variables.tf             
 ├── .gitignore
 ├── aws-iconik-transcoder.png        
+├── backend.tf          
 ├── main.tf                          
 ├── provider.tf                      
 ├── README.md                        
 ├── terraform.tfstate                
 ├── terraform.tfstate.backup         
 ├── terraform.tfvars                 
-└── variables.tf                     
+└── variables.tf                                 
 ```
 
 ## Requirements
