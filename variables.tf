@@ -15,9 +15,14 @@ variable "public_subnet_cidr" {
   type        = string
 }
 
+variable "private_subnet_cidr" {
+  description = "CIDR block for the public subnet"
+  type        = string
+}
+
 variable "availability_zone" {
   description = "The availability zone for the public subnet"
-  type        = string
+  type        = list(string)
 }
 
 ##EC2 

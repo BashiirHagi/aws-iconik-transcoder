@@ -4,10 +4,11 @@ provider "aws" {
 
 
 module "vpc" {
-  source             = "./modules/vpc"
-  vpc_cidr_block     = var.vpc_cidr_block
-  public_subnet_cidr = var.public_subnet_cidr
-  availability_zone  = var.availability_zone
+  source              = "./modules/vpc"
+  vpc_cidr_block      = var.vpc_cidr_block
+  public_subnet_cidr  = var.public_subnet_cidr
+  private_subnet_cidr = var.private_subnet_cidr
+  availability_zone   = var.availability_zone
 }
 
 module "ec2_instance" {
@@ -24,7 +25,7 @@ module "ec2_instance" {
   health_check_type         = var.health_check_type
   desired_capacity          = var.desired_capacity
   force_delete_status       = var.force_delete_status
-  vpc_zone_identifier       = [module.vpc.public_subnet_id] //list of strings 
+  vpc_zone_identifier       = [module.vpc.public_subnet_id]
 }
 
 module "s3_bukcet" {

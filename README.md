@@ -53,6 +53,41 @@ aws-iconik-transcoder/
 - Iconik web portal access to - https://preview.iconik.cloud/
 - Iconik edge transcoder installer 
 
+## How to use: 
+To use the module, update the values in the ./terraform.tfvars  with values for your environment and run terraform apply 
+
+```bash
+aws_region = ""
+
+# VPC and Subnet configuration
+vpc_cidr_block     = ""
+public_subnet_cidr = ""
+availability_zone  = ""
+
+# EC2 
+ami_id                    = ""
+instance_type             = ""
+key_name                  = ""
+asg_name                  = ""
+asg_max_size              = ""
+asg_min_size              = ""
+health_check_grace_period = ""
+health_check_type         = ""
+desired_capacity          = ""
+force_delete_status       = ""
+vpc_zone_identifier       = [""]
+
+# S3
+aws_s3_bucket = ""
+status        = ""
+sse_algorithm = ""
+tags = {
+  Name        = ""
+  environment = ""
+}
+
+```
+
 ## Transcoder Installations steps: 
 - Navigate to AWS region you want to provision EC2 instance in
 - Launch EC2 instance - selecting instance type, OS base image (e.g. Ubuntu 24.04)

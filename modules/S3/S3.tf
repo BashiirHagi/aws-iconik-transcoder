@@ -49,7 +49,7 @@ resource "aws_s3_bucket_policy" "allow_iconik_access" { //iconik-S3-bucket-acces
           "s3:DeleteObject",
           "s3:RestoreObject"
         ],
-        "Resource" : "arn:aws:s3:::iconik-master-ingest-bashiir/*"
+        "Resource" : "arn:aws:s3:::iconik-ingest-bashiir/*"
       },
       {
         "Sid" : "AllowBucketLevelAccess",
@@ -64,7 +64,7 @@ resource "aws_s3_bucket_policy" "allow_iconik_access" { //iconik-S3-bucket-acces
           "s3:PutBucketCORS",
           "s3:GetAccelerateConfiguration"
         ],
-        "Resource" : "arn:aws:s3:::iconik-master-ingest-bashiir"
+        "Resource" : "arn:aws:s3:::iconik-ingest-bashiir"
       }
     ]
   })
