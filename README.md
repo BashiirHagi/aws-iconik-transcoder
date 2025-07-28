@@ -54,7 +54,7 @@ aws-iconik-transcoder/
 - Iconik edge transcoder installer 
 
 ## How to use: 
-To use the module, update the values in the ./terraform.tfvars  with values for your environment and run terraform apply 
+To use the Terraform modules for the deployment of resources, update the values in the terraform.tfvars files with entries for your environment and run - terraform apply. 
 
 ```bash
 aws_region = ""
