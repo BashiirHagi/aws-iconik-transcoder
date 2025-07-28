@@ -51,7 +51,7 @@ aws-iconik-transcoder/
 - Terraform >= 1.4.0  
 - AWS CLI configured with access keys 
 - Iconik web portal access to - https://preview.iconik.cloud/
-- Iconik edge transcoder installer 
+- Iconik edge transcoder installed on your EC2 instance
 
 ## How to use: 
 To use the Terraform modules for the deployment of resources, update the values in the terraform.tfvars files with entries for your environment and run - terraform apply. 
