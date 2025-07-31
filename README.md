@@ -51,7 +51,7 @@ aws-iconik-transcoder/
 
 - Terraform >= 1.4.0  
 - AWS CLI configured with access keys 
-- Iconik web portal access to - https://preview.iconik.cloud/
+- Iconik web portal access to - [https://preview.iconik.cloud/]
 - Iconik edge transcoder installed on your EC2 instance
 
 ## Terraform Modules: 
@@ -174,6 +174,7 @@ To further improve the resillinece and fault-tolerance of the platform I would d
 To increase the security of the workloads I would implement the following: 
 
 - Enforce least privillege access in the S3 bucket policy 
+- Lock down security group inbound rules to specific IP addresses instead of all hosts (0.0.0.0/0)
 - Securely store the application tokens from iconik for authentication in AWS Secrets Manager. This will store and manage the credentials for us. AWS KMs can then be used to encrypt these secrets increasing the security posture even more. 
 - I would enable AWS Macie, VPC flow logs and AWS GuardDuty which would increase the visibility and secutity of the platform
 
