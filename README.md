@@ -5,7 +5,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 ## Features
 
 - AWS VPC, public/private subnet and internet gateway have been provisioned for secure internet access
-- Multi-AZ deployment implemented in the VPC to ensure the high avaialbilty (HA) and prevent single point of failure 
+- Multi-AZ deployment implemented in the VPC to ensure high avaialbilty (HA) and prevent single point of failure 
 - S3 bucket provisioned for master content ingestion and bucket permissions configured
 - Linux Ubuntu EC2 instance provisioned in a auto-scaling group for scalability purposes
 - AMI image created for Iconik edge transcoder to improve reusability 
