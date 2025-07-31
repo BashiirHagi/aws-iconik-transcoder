@@ -5,6 +5,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 ## Features
 
 - AWS VPC, public/private subnet and internet gateway have been provisioned for secure internet access
+- Multi-AZ deployment implemented in the VPC to ensure the high avaialbilty (HA) and prevent single point of failure 
 - S3 bucket provisioned for master content ingestion and bucket permissions configured
 - Linux Ubuntu EC2 instance provisioned in a auto-scaling group for scalability purposes
 - AMI image created for Iconik edge transcoder to improve reusability 
@@ -184,3 +185,12 @@ To further increase the scalability of the compute resources I would use Elastic
 
 - ### Cost Efficiency:
 To reduce the costs incurred in the platform, I would integrate VPC gateway endpoints to allow the compute resources in the VPC to securely connect to the S3 bucket without traversing the public internet. This would create a secure private connection between the services and prevent network traffic from leaving the VPC, greatly reducing egress traffic charges. 
+
+Links: 
+
+https://help.iconik.backlight.co/hc/en-us/articles/25303770933271-iconik-Architecture-Overview
+
+https://help.iconik.backlight.co/hc/en-us/articles/25304180048663-Installing-iconik-Edge-Transcoder-on-Ubuntu-24-04
+
+https://help.iconik.backlight.co/hc/en-us/articles/25027458899351-AWS-storage
+
