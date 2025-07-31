@@ -42,8 +42,7 @@ aws-iconik-transcoder/
 ├── main.tf                          
 ├── provider.tf                      
 ├── README.md                        
-├── terraform.tfstate                
-├── terraform.tfstate.backup         
+├── terraform.tfstate                      
 ├── terraform.tfvars                 
 └── variables.tf                                 
 ```
@@ -55,7 +54,7 @@ aws-iconik-transcoder/
 - Iconik web portal access to - https://preview.iconik.cloud/
 - Iconik edge transcoder installed on your EC2 instance
 
-## How to use: 
+## Terraform Modules: 
 To utilise the Terraform modules to deploy AWS resources in your environment, update the values in the terraform.tfvars files with valid entries and run - terraform apply. 
 
 ```bash
@@ -169,7 +168,7 @@ To create the AMI image containing the iconik edge transcoder, perform the follo
 
 ## Future Improvements I would implement 
 - ### High availability:
-To ensure the high availability of the platform I would deploy the iconik Edge Transcoder across multiple subnets, availability zones and regions. This would improve the fault-tolerance and prevent a single point of failure we have now. 
+To further improve the resillinece and fault-tolerance of the platform I would deploy the iconik Edge Transcoder across additional availability zones and regions -e.g. eu-west-2 (Ireland). This would allow our AWS infrastruture to withstand potential failures and remain operational improving the customer experience.  
 
 - ### Security Enhancements:
 To increase the security of the workloads I would implement the following: 
