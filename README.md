@@ -11,7 +11,7 @@ This project provisions a secure and automated AWS infrastructure for integratin
 - AMI image created for Iconik edge transcoder to improve reusability 
 - Terraform Modules configured to automate AWS deployments - EC2, S3 & VPC
 - Terraform configuration for AWS service isolated in separate Child modules folders - containing service.tf, variables.tf and output.tf
-- Used remote backend to store the Terraform state for the AWS infrastructure 
+- Used S3 remote backend to store the Terraform state for the AWS infrastructure 
 - Architecture diagram demonstrating system components created in Excalidraw, to improve understanding of data flow and service interactions
 
 ## High-Level Architecture
