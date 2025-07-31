@@ -186,6 +186,7 @@ To further increase the scalability of the compute resources I would use Elastic
 - ### Cost Efficiency:
 To reduce the costs incurred in the platform, I would integrate VPC gateway endpoints to allow the compute resources in the VPC to securely connect to the S3 bucket without traversing the public internet. This would create a secure private connection between the services and prevent network traffic from leaving the VPC, greatly reducing egress traffic charges. 
 
+
 Links: 
 
 https://help.iconik.backlight.co/hc/en-us/articles/25303770933271-iconik-Architecture-Overview
