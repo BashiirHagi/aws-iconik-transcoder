@@ -41,7 +41,7 @@ resource "aws_security_group" "iconik_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["137.220.80.60/32"]
   }
 
   egress {
