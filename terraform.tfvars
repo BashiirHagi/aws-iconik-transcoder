@@ -20,7 +20,7 @@ force_delete_status       = true
 vpc_zone_identifier       = ["subnet-021f21dcb51ba0b8b", "subnet-0129554e8d0225801"]
 
 # S3
-aws_s3_bucket = "iconik-ingest-bashiir"
+aws_s3_bucket = "iconik-ingest-bashiir2"
 status        = "Enabled"
 sse_algorithm = "AES256"
 tags = {
